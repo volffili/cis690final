@@ -11,6 +11,7 @@ var http = require('http').Server(app);
 
 //make the client folder public
 app.use(express.static(__dirname + '/../client'));
+app.use(express.static(__dirname + '/../shared'));
 
 //ip config
 var ipaddress = process.env.IP || cfg.host;

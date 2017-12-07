@@ -7,6 +7,15 @@ class User{
 		this.id = id;
 		this.lastHeartbeat = heartBeat;
 		this.pressedKeys = [];
+		this.serialize = this.serialize.bind(this);
+	}
+	serialize(){
+		return {
+			x:this.position.x,
+			y:this.position.y,
+			id:this.id,
+			lastHeartbeat: this.lastHeartbeat
+		}
 	}
 }
 
