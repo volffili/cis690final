@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta Properties -->
+    <meta charset="UTF-8">
+    <title>Space Battle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div id="gameAreaWrapper">
+        <div id="status"><span class="title">Leaderboard</span></div>
+        <div class="chatbox" id="chatbox">
+            <ul id="chatList" class="chat-list"></ul>
+            <input id="chatInput" type="text" class="chat-input" placeholder="Chat here..." maxlength="35" />
+        </div>
+        <canvas tabindex="1" id="cvs"></canvas>
+    </div>
+    <div id="startMenuWrapper">
+        <div id="startMenu">
+            <p>Space Battle</p>
+            <input type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
+            <b class="input-error">Nick must be alphanumeric characters only!</b>
+
+            <h3>Choose your ship</h3>
+            <br>
+            <input type="radio" id="shipTypeChooser1"
+             name="contact" value="1" checked="true">
+            <label for="contactChoice1">Frigate - classic ship</label>
+            <br>
+
+            <input type="radio" id="shipTypeChooser2"
+             name="contact" value="2">
+            <label for="contactChoice2">Cruiser - strong but slow</label>
+            <br>
+
+            <input type="radio" id="shipTypeChooser3"
+             name="contact" value="3">
+            <label for="contactChoice3">Corvette - fast and agile</label>
+            <br>
+
+            <h3>Choose the color of your ship</h3>
+            <br/>
+            <input type="color" id="html5colorpicker" value="#ff0000" style="width:100%;">
+
+            <a><button id="startButton">Play</button></a>
+
+            <div id="instructions">
+                <h3>Gameplay</h3>
+                <ul>
+                    <li>Steer with left/right arrow</li>
+                    <li>Accelerate with the up arrow</li>
+                    <li>Fire with 'F'</li>
+                    <li>Collect cryptocurrency Monero</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!--for some reason the ES6 import doesn't work, I have to import it this way-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="./js/client.js"></script>
+    
+
+</body>
+</html>

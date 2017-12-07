@@ -1,0 +1,25 @@
+{
+  "name": "cis690",
+  "version": "1.0.0",
+  "description": "Multiplayer game that rewards players with cryptocurrencies",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volffili/cis690final.git"
+  },
+  "author": "Filip Volf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volffili/cis690final/issues"
+  },
+  "homepage": "https://github.com/volffili/cis690final#readme",
+  "devDependencies": {
+    "express": "^4.16.2",
+    "sat": "^0.6.0",
+    "socket.io": "^2.0.4"
+  }
+}
